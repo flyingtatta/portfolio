@@ -18,4 +18,4 @@ function changeHeaderColor(){
   myHeader.style.color = colorInput;
 }
 
-setInterval("changeHeaderColor()", 250);
+setInterval("changeHeaderColor()", 300);
