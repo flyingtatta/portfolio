@@ -17,11 +17,29 @@
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
-    /* .card-img-top {
+    .underline-animation {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .underline-animation::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
       width: 100%;
-      height: 15vw;
-      object-fit: scale-down;
-    } */
+      height: 2px;
+      background-color: #000; /* Set the desired color for the underline */
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.3s ease;
+    }
+
+    .underline-animation:hover::after {
+      transform: scaleX(1);
+    }
+
   </style>
 </head>
 
@@ -33,7 +51,19 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar nav">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="mailto:hamzajg16@gmail.com">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="src/HamzaGabajiwala-Resume.pdf" target="_blank">
+                <button type="button" class="btn btn-outline-light" name="button">Resume</button>
+              </a>
+            </li>
+          </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item px-lg-0 px-2">
               <a class="nav-link waves-effect waves-light" target="_blank" href="https://www.linkedin.com/in/hamza-gabajiwala/">
@@ -51,13 +81,18 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:white}</style><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
               </a>
             </li>
+            <li class="nav-item px-lg-0 px-2">
+              <a class="nav-link waves-effect waves-light" target="_blank" href="https://leetcode.com/hamzajg16_/">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <div class="mt-4 w-100 mx-auto" id="#education">
-      <h1 class="display-6">Education</h1>
+      <h1 class="display-5 underline-animation">Education</h1>
       <div class="row" data-masonry='{"percentPosition": true }'>
         <div class="col-lg-6">
           <div class="card mb-3 shadow-sm text-bg-light">
@@ -102,7 +137,7 @@
     </div>
 
     <div class="mt-4 w-100 mx-auto" id="#experience">
-      <h1 class="display-6">Experience</h1>
+      <h1 class="display-5 underline-animation">Experience</h1>
       <div class="row" data-masonry='{"percentPosition": true }'>
         <div class="col-lg-6">
           <div class="card mb-3 shadow-sm text-bg-light">
@@ -156,7 +191,7 @@
 
 
     <div class="mt-4 w-100 mx-auto" id="#projects">
-      <h1 class="display-6">Projects</h1>
+      <h1 class="display-5 underline-animation">Projects</h1>
 
       <div class="row" data-masonry='{"percentPosition": true }'>
         <div class="col-lg-6">
