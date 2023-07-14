@@ -44,10 +44,11 @@
 
     setTimeout(function() {
       if (shouldRefresh) {
-        location.reload();
         shouldRefresh = false;
+        location.replace(location.href);
+        window.stop();
       }
-    }, 1000);
+    }, 2000);
   </script>
 </head>
 
