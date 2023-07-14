@@ -40,7 +40,14 @@
     }
   </style>
   <script type="text/javascript">
-    location.reload();
+    var shouldRefresh = true;
+
+    setTimeout(function() {
+      if (shouldRefresh) {
+        location.reload();
+        shouldRefresh = false;
+      }
+    }, 1000);
   </script>
 </head>
 
