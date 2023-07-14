@@ -40,14 +40,9 @@
     }
   </style>
   <script type="text/javascript">
-    var shouldRefresh = true;
-
     setTimeout(function() {
-      if (shouldRefresh) {
-        shouldRefresh = false;
-        location.replace(location.href);
+        location.reload();
         window.stop();
-      }
     }, 2000);
   </script>
 </head>
